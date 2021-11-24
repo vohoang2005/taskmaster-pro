@@ -95,3 +95,8 @@ $("#remove-tasks").on("click", function() {
 loadTasks();
 
 
+setInterval(function () {
+  $(".card .list-group-item").each(function(index, el) {
+    auditTask(el);
+  });
+}, (1000 * 60) * 30);
